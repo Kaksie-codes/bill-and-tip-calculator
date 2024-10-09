@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c5e4e7;
+    color: #00494d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 8px;
+    color: #5e7a7d;
+    margin-bottom: 30px;
+}
+
+.calculator {
+    display: flex;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    /* width: min(90%, 700px); */
+}
+
+.input-section, .output-section {
+    padding: 20px;
+    flex: 1;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.bill-span {
+    position: relative;
+    top: 1.85rem;
+    right: 5rem;
+}
+
+.people-span {
+    position: relative;
+    top: 1.9rem;
+    right: 5rem;
+}
+
+label, p {
+    font-size: 14px;
+    color: #5e7a7d;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f3f9fa;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tip-btn, #custom-tip {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #00494d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#custom-tip {
+    background-color: #f3f9fa;
+    color: #00494d;
+}
+
+.output-section {
+    background-color: #00494d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.output {
+    margin-bottom: 30px;
+}
+
+.output p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.output h2 {
+    font-size: 32px;
+}
+
+#reset-btn {
+    background-color: #26c0ab;
+    color: #00494d;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#reset-btn:disabled {
+    background-color: #0d686d;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        padding: 10px;
+    }
+}
